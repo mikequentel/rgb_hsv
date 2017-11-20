@@ -147,4 +147,4 @@ def lambda_handler(event, context):
     V = fromPercentage(value)
     rgb = hsv2rgb(H, S, V)
 
-  return {"statusCode": 200,"headers":{"Content-Type":"application/json"},"body":[rgb, hsv]}
+  return {"statusCode": 200,"headers":{"Access-Control-Allow-Origin":"*","Content-Type":"application/json"},"body":[rgb, hsv]}
