@@ -118,18 +118,18 @@ def lambda_handler(event, context):
   value = None
 
   if event.has_key('red'):
-    red = event['red']
+    red = int(event['red'])
   if event.has_key('green'):
-    green = event['green']
+    green = int(event['green'])
   if event.has_key('blue'):
-    blue = event['blue']
+    blue = int(event['blue'])
 
   if event.has_key('hue'):
-    hue = event['hue']
+    hue = int(event['hue'])
   if event.has_key('saturation'):
-    saturation = event['saturation']
+    saturation = int(event['saturation'])
   if event.has_key('value'):
-    value = event['value']
+    value = int(event['value'])
 
   if red is not None:
     R = from8bit(red)
