@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  rgbhsv:
+    image: mikequentel/rgb_hsv:latest
+    container_name: rgbhsv
+    tty: true
+    stdin_open: true
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      DISPLAY: ${DISPLAY}
